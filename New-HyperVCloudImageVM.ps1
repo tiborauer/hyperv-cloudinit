@@ -838,6 +838,7 @@ if ($ImageTypeAzure) {
 # Create meta data ISO image, src: https://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html
 # both azure and nocloud support same cdrom filesystem https://github.com/canonical/cloud-init/blob/606a0a7c278d8c93170f0b5fb1ce149be3349435/cloudinit/sources/DataSourceAzure.py#L1972
 Write-Host "Creating metadata iso for VM provisioning... " -NoNewline
+if (!(test-path $VMStoragePath)) {mkdir -Path $VMStoragePath | out-null}
 $metaDataIso = "$($VMStoragePath)\$($VMName)-metadata.iso"
 Write-Verbose "Filename: $metaDataIso"
 cleanupFile $metaDataIso
