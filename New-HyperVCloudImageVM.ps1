@@ -1268,4 +1268,5 @@ if ($ShowVmConnectWindow) {
   Start-Process "vmconnect" "localhost","$VMName" -WindowStyle Normal
 }
 
-Write-Host "Done -> Wait until the reboot in a few minutes"
+Write-Host "Done -> Wait until cloud-init is finished. Use " -NoNewline
+Write-Host -ForegroundColor Green "cloud-init status [--wait]"
