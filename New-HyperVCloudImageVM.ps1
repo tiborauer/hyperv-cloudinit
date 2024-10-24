@@ -1269,4 +1269,4 @@ if ($ShowVmConnectWindow) {
 }
 
 Write-Host "Done -> Wait until cloud-init is finished. Use " -NoNewline
-Write-Host -ForegroundColor Green "cloud-init status [--wait]"
+Write-Host -ForegroundColor Yellow "cloud-init status [--wait]"
