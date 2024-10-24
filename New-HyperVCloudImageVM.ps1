@@ -1268,4 +1268,4 @@ if ($ShowVmConnectWindow) {
   Start-Process "vmconnect" "localhost","$VMName" -WindowStyle Normal
 }
 
-Write-Host "Done"
+Write-Host "Done -> Wait until the reboot in a few minutes"
